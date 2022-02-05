@@ -1,0 +1,24 @@
+{
+  "name": "browser-config",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha -r dist/js/mocha-hooks.js dist/js/**/*.test.js",
+    "build": "rm -r dist/js || true && tsc && rm dist/js/mocha-hooks.js && find ./dist/js -name '*.test.js' -type f -delete",
+    "dev": "tsc -w & http-server ./dist -c-1 -p3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "@types/mocha": "^9.1.0",
+    "@types/sinon": "^10.0.9",
+    "http-server": "^14.1.0",
+    "mocha": "^9.2.0",
+    "prettier": "2.5.1",
+    "sinon": "^13.0.1",
+    "typescript": "^4.5.5"
+  }
+}
