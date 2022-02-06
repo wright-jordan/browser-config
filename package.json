@@ -1,11 +1,9 @@
 {
   "name": "browser-config",
   "version": "1.0.0",
-  "main": "dist/index.js",
   "scripts": {
-    "test": "tsc && mocha -r dist/js/mocha-hooks.js dist/js/**/*.test.js",
-    "build": "find ./dist -name '*.js' -type f -delete && tsc && rm dist/mocha-hooks.js && find ./dist -name '*.test.js' -type f -delete",
-    "dev": "tsc -w & http-server ./dist -c-1 -p3000"
+    "dev": "parcel 'src/**/*.html'",
+    "build": "parcel build 'src/**/*.html' && rm dist/mocha.*"
   },
   "keywords": [],
   "author": "",
@@ -13,10 +11,12 @@
   "description": "",
   "type": "module",
   "devDependencies": {
+    "@types/chai": "^4.3.0",
     "@types/mocha": "^9.1.0",
     "@types/sinon": "^10.0.9",
-    "http-server": "^14.1.0",
+    "chai": "^4.3.6",
     "mocha": "^9.2.0",
+    "parcel": "^2.2.1",
     "prettier": "2.5.1",
     "sinon": "^13.0.1",
     "typescript": "^4.5.5"
