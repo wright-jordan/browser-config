@@ -17,7 +17,7 @@
     "allowJs": false,
 
     /* Emit */
-    "outDir": "./dist/js",
+    "outDir": "./dist",
     "removeComments": true,
 
     /* Interop Constraints */

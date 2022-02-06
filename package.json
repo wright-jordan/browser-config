@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha -r dist/js/mocha-hooks.js dist/js/**/*.test.js",
-    "build": "rm -r dist/js || true && tsc && rm dist/js/mocha-hooks.js && find ./dist/js -name '*.test.js' -type f -delete",
+    "build": "find ./dist -name '*.js' -type f -delete && tsc && rm dist/mocha-hooks.js && find ./dist -name '*.test.js' -type f -delete",
     "dev": "tsc -w & http-server ./dist -c-1 -p3000"
   },
   "keywords": [],
