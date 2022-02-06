@@ -21,6 +21,7 @@
     "removeComments": true,
 
     /* Interop Constraints */
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 
     /* Type Checking */

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha -r dist/js/mocha-hooks.js dist/js/**/*.test.js",
+    "test": "tsc && mocha -r dist/js/mocha-hooks.js dist/js/**/*.test.js",
     "build": "find ./dist -name '*.js' -type f -delete && tsc && rm dist/mocha-hooks.js && find ./dist -name '*.test.js' -type f -delete",
     "dev": "tsc -w & http-server ./dist -c-1 -p3000"
   },
