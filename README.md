@@ -1,2 +1,1 @@
-# node-config
 # browser-config
