@@ -5,7 +5,7 @@ if (!(h1 instanceof HTMLHeadingElement)) {
   throw new Error("h1 element not found");
 }
 
-h1.addEventListener("click", function (ev) {
+h1.addEventListener("click", function (_ev) {
   if (this.style.backgroundColor === "red") {
     this.style.backgroundColor = "blue";
     return;
